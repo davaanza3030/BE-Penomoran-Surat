@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100); // Nama kategori
-            $table->string('abbreviation', 10)->nullable();
+            // $table->string('abbreviation', 10)->nullable();
             $table->foreignId('created_by')->constrained('users')->onDelete('cascade'); // Relasi ke users
             $table->timestamps();
         });
